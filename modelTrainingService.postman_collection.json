@@ -1,0 +1,704 @@
+{
+	"info": {
+		"name": "modelTrainingService",
+		"_postman_id": "0c008baa-a0f6-6559-b8d2-6160ff771760",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Train-Upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Payroll-Results-API-Key",
+						"value": "abcdefghijklmno"
+					},
+					{
+						"key": "X-Payroll-Results-Auth-Token",
+						"value": "3fdf8020cd39740a"
+					},
+					{
+						"key": "X-Payroll-Results-Application",
+						"value": "UI5 Client"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"value": ""
+						},
+						{
+							"key": "name",
+							"value": "Training Data",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/train/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"train",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Train - Get all training data info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Payroll-Results-API-Key",
+						"value": "abcdefghijklmno"
+					},
+					{
+						"key": "X-Payroll-Results-Auth-Token",
+						"value": "3fc7a55f23395310"
+					},
+					{
+						"key": "X-Payroll-Results-Application",
+						"value": "UI5 Client"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "file"
+						},
+						{
+							"key": "name",
+							"value": "Sample Data",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/train",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Train - Get Training Data for ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Payroll-Results-API-Key",
+						"value": "abcdefghijklmno"
+					},
+					{
+						"key": "X-Payroll-Results-Auth-Token",
+						"value": "3fec20120339f0e1"
+					},
+					{
+						"key": "X-Payroll-Results-Application",
+						"value": "UI5 Client"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "file"
+						},
+						{
+							"key": "name",
+							"value": "Sample Data",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/train/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"train",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Model - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Payroll-Results-API-Key",
+						"value": "abcdefghijklmno"
+					},
+					{
+						"key": "X-Payroll-Results-Auth-Token",
+						"value": "3fec20120339f0e1"
+					},
+					{
+						"key": "X-Payroll-Results-Application",
+						"value": "UI5 Client"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"trainingDataInfoId\" : 3,\n\t\"name\" : \"Random Model Name\",\n\t\"type\" : \"DT\",\n\t\"wt01\" : -3,\n\t\"wt02\" : -2,\n\t\"wt03\" : -1,\n\t\"wt04\" : -0,\n\t\"wt05\" : -1,\n\t\"wt06\" : -2,\n\t\"wt07\" : 3,\n\t\"wt08\" : 4,\n\t\"wt09\" : 5,\n\t\"wt10\" : 7,\n\t\"wt11\" : -3,\n\t\"wt12\" : -2,\n\t\"wt13\" : -1,\n\t\"wt14\" : -0,\n\t\"wt15\" : -1,\n\t\"wt16\" : -2,\n\t\"wt17\" : 3,\n\t\"wt18\" : 4,\n\t\"wt19\" : 5,\n\t\"wt20\" : 7,\n\t\"wt21\" : -3,\n\t\"wt22\" : -2,\n\t\"wt23\" : -1,\n\t\"wt24\" : -0,\n\t\"wt25\" : -1,\n\t\"wt26\" : -2,\n\t\"wt27\" : 3,\n\t\"wt28\" : 4,\n\t\"wt29\" : 5\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/model/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"model",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Model - Get All Models",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Payroll-Results-API-Key",
+						"value": "abcdefghijklmno"
+					},
+					{
+						"key": "X-Payroll-Results-Auth-Token",
+						"value": "3fdf8020cd39740a"
+					},
+					{
+						"key": "X-Payroll-Results-Application",
+						"value": "UI5 Client"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sample Model",
+							"type": "text"
+						},
+						{
+							"key": "trainingDataInfoId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "DT",
+							"type": "text"
+						},
+						{
+							"key": "wt01",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "wt02",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "wt03",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "wt04",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "wt05",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "wt06",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "wt07",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "wt08",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "wt09",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "wt10",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "wt11",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "wt12",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "wt13",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "wt14",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "wt15",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "wt16",
+							"value": "16",
+							"type": "text"
+						},
+						{
+							"key": "wt17",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "wt18",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "wt19",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "wt20",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "wt21",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "wt22",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "wt23",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "wt24",
+							"value": "24",
+							"type": "text"
+						},
+						{
+							"key": "wt25",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "wt26",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "wt27",
+							"value": "27",
+							"type": "text"
+						},
+						{
+							"key": "wt28",
+							"value": "28",
+							"type": "text"
+						},
+						{
+							"key": "wt29",
+							"value": "29",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Model - Get Model By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Payroll-Results-API-Key",
+						"value": "abcdefghijklmno"
+					},
+					{
+						"key": "X-Payroll-Results-Auth-Token",
+						"value": "3fec20120339f0e1"
+					},
+					{
+						"key": "X-Payroll-Results-Application",
+						"value": "UI5 Client"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sample Model",
+							"type": "text"
+						},
+						{
+							"key": "trainingDataInfoId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "DT",
+							"type": "text"
+						},
+						{
+							"key": "wt01",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "wt02",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "wt03",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "wt04",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "wt05",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "wt06",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "wt07",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "wt08",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "wt09",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "wt10",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "wt11",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "wt12",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "wt13",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "wt14",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "wt15",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "wt16",
+							"value": "16",
+							"type": "text"
+						},
+						{
+							"key": "wt17",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "wt18",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "wt19",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "wt20",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "wt21",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "wt22",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "wt23",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "wt24",
+							"value": "24",
+							"type": "text"
+						},
+						{
+							"key": "wt25",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "wt26",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "wt27",
+							"value": "27",
+							"type": "text"
+						},
+						{
+							"key": "wt28",
+							"value": "28",
+							"type": "text"
+						},
+						{
+							"key": "wt29",
+							"value": "29",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/model/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"model",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Model - Train - Queue Data To RMQ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Payroll-Results-API-Key",
+						"value": "abcdefghijklmno"
+					},
+					{
+						"key": "X-Payroll-Results-Auth-Token",
+						"value": "3fe291b6ec81250b"
+					},
+					{
+						"key": "X-Payroll-Results-Application",
+						"value": "UI5 Client"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/model/2/train",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"model",
+						"2",
+						"train"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Model - Analysis",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Payroll-Results-API-Key",
+						"value": "abcdefghijklmno"
+					},
+					{
+						"key": "X-Payroll-Results-Auth-Token",
+						"value": "3fdf8020cd39740a"
+					},
+					{
+						"key": "X-Payroll-Results-Application",
+						"value": "UI5 Client"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "analyze.csv"
+						},
+						{
+							"key": "modelId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/model/analysis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"model",
+						"analysis"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
